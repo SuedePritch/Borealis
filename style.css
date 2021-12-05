@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.container {
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  height: 60vh;
+}
+
+.container .page {
+  scroll-snap-align: start;
+  width: 100vw;
+  height: 100%;
+}
+
+.title {
+  background: black;
+  height: auto;
+  padding: 1rem;
+}
+
+.title h1 {
+  font-size: clamp(16px, 10vw, 200px);
+  font-family: Ultra, serif;
+  font-weight: 900;
+  line-height: 0.8;
+  letter-spacing: -5px;
+  overflow: hidden;
+}
+
+.title h2 {
+  font-size: clamp(16px, 5vw, 100px);
+  font-family: Erica One;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.title h1, .title h2 {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url(cartoonAurora.png);
+  background-repeat: repeat space;
+  background-clip: text;
+  -webkit-animation: aurora 10s linear 1ms forwards;
+          animation: aurora 10s linear 1ms forwards;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: aurora 10s cubic-bezier(0, 0, 0.11, 0.79) 1ms forwards;
+}
+
+@-webkit-keyframes aurora {
+  0% {
+    background-position-y: 100px;
+  }
+  100% {
+    background-position-y: -400px;
+  }
+}
+
+@keyframes aurora {
+  0% {
+    background-position-y: 100px;
+  }
+  100% {
+    background-position-y: -400px;
+  }
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 0.5rem;
+  font-size: 0.8rem;
+  width: 100vw;
+  height: 15vh;
+  background: black;
+  font-size: clamp(16px, 2vw, 48px);
+}
+
+.footer .contact {
+  display: inline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #03F893;
+  text-decoration: none;
+}
+
+.footer .contact svg {
+  width: 10vw;
+  height: 10vh;
+}
+
+.footer .address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #03F893;
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */
