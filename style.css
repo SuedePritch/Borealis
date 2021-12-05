@@ -22,8 +22,9 @@
 }
 
 .title {
+  text-align: center;
   background: black;
-  padding: 3rem;
+  padding: 2rem;
   height: 35vh;
 }
 
@@ -31,7 +32,7 @@
   font-size: clamp(16px, 10vw, 180px);
   font-family: Ultra, serif;
   font-weight: 900;
-  line-height: 0.8;
+  line-height: 0.7;
   letter-spacing: -5px;
   overflow: hidden;
 }
@@ -44,31 +45,31 @@
 }
 
 .title h1, .title h2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: inline-block;
   background-image: url(cartoonAurora.png);
   background-repeat: repeat space;
-  -webkit-background-repeat: repeat space;
   background-clip: text;
+  animation-name: aurora;
+  animation-duration: 8s;
+  animation-timing-function: ease-out;
+  background-position-y: -400px;
+  -webkit-background-repeat: repeat space;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: aurora 6s ease-out 10ms forwards;
-  -webkit-animation: aurora 6s ease-out 10ms forwards;
+  -webkit-animation-name: aurora;
+  -webkit-animation-duration: 8s;
+  -webkit-animation-timing-function: ease-out;
 }
 
 @-webkit-keyframes aurora {
   0% {
-    background-position-y: 100px;
+    -webkit-background-position-y: 100px;
   }
   10% {
-    background-position-y: -100px;
+    -webkit-background-position-y: -100px;
   }
   100% {
-    background-position-y: -400px;
+    -webkit-background-position-y: -400px;
   }
 }
 
@@ -121,6 +122,7 @@
   width: 100%;
   max-width: 600px;
   height: 40%;
+  min-height: 80px;
   max-height: 150px;
   border: none;
   border-radius: 30px;
