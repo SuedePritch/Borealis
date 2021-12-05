@@ -24,12 +24,13 @@
 .title {
   text-align: center;
   background: black;
-  padding: 2rem;
+  padding: 1rem;
+  padding-top: 4rem;
   height: 35vh;
 }
 
 .title h1 {
-  font-size: clamp(16px, 10vw, 180px);
+  font-size: clamp(16px, 12vw, 180px);
   font-family: Ultra, serif;
   font-weight: 900;
   line-height: 0.7;
@@ -92,6 +93,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 5rem;
   border: none;
 }
@@ -116,7 +120,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 5vw;
+  font-size: clamp(16px, 5vw, 60px);
   text-decoration: none;
   margin: 2rem;
   width: 100%;
