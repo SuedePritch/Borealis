@@ -22,7 +22,7 @@
 .title {
   background: black;
   height: auto;
-  padding: 1rem;
+  padding: 5rem;
 }
 
 .title h1 {
@@ -42,7 +42,6 @@
 }
 
 .title h1, .title h2 {
-  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,17 +50,20 @@
           justify-content: center;
   background-image: url(cartoonAurora.png);
   background-repeat: repeat space;
+  -webkit-background-repeat: repeat space;
   background-clip: text;
-  -webkit-animation: aurora 10s linear 1ms forwards;
-          animation: aurora 10s linear 1ms forwards;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: aurora 10s cubic-bezier(0, 0, 0.11, 0.79) 1ms forwards;
+  animation: aurora 6s linear 10ms forwards;
+  -webkit-animation: aurora 6s steps(10000) 10ms forwards;
 }
 
 @-webkit-keyframes aurora {
   0% {
     background-position-y: 100px;
+  }
+  10% {
+    background-position-y: -100px;
   }
   100% {
     background-position-y: -400px;
@@ -71,6 +73,9 @@
 @keyframes aurora {
   0% {
     background-position-y: 100px;
+  }
+  10% {
+    background-position-y: -100px;
   }
   100% {
     background-position-y: -400px;
