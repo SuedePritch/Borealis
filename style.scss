@@ -1,3 +1,10 @@
+:root{
+    --colour-green: hsl(140, 95%, 48%);
+    --colour-blue:hsl(200, 80%, 60%);
+    --colour-background-light:hsl(0, 0%, 100%);
+    --colour-background-dark:hsl(0, 0%, 0%);
+}
+
 *{
     margin:0;
     padding:0;
@@ -6,29 +13,11 @@
     
 }
 
-.container{
-    scroll-snap-type: y mandatory;
-    height: 50vh;
-    
-    .page{
-        scroll-snap-align: start;
-        width: 100vw;
-        height: 50vh;
-        padding:3rem;
-        background-image:linear-gradient(#020305 0%, #342065 100%)
-        
-    }
-}
-
 .title{
     text-align: center;
-    background:black;
-    padding: 1rem;
-    padding-top: 4rem;
-    height: 35vh;
-    
-
-
+    background:var(--colour-background-dark);
+    padding: 2em;
+    height: fit-content;
     
     h1{
         font-size: clamp(16px, 12vw, 180px);
@@ -38,45 +27,43 @@
         letter-spacing: -5px;
         overflow: hidden;
     }
-    h2{
-        font-size: clamp(16px, 5vw, 100px);
-        font-family: Erica One;
-        font-weight: 100;
-        text-transform: uppercase;
-    }
-
-    h1, h2{
+        h2{
+            font-size: clamp(16px, 5vw, 100px);
+            font-family: Erica One;
+            font-weight: 100;
+            text-transform: uppercase;
+        }
+        h1, h2{
         display: inline-block;
         background-image: url(cartoonAurora.png);
-
+        
         background-repeat: repeat space;
         background-clip: text;
         
         
         animation-name: aurora;
         animation-duration:  8s;
-        animation-timing-function: ease-out;  
-        background-position-y: -400px;
-
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        
         -webkit-background-repeat: repeat space;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         -webkit-animation-name: aurora;
         -webkit-animation-duration: 8s;
         -webkit-animation-timing-function:  ease-out;
+        -webkit-animation-fill-mode: forwards;
         
-    
+        
     }
     
     @-webkit-keyframes aurora{
-        0%{-webkit-background-position-y: 100px;}
-        10%{-webkit-background-position-y: -100px;}
+        0%{-webkit-background-position-y: -100px;}
         100%{-webkit-background-position-y: -400px;}
         
     }
     @keyframes aurora{
-        0%{background-position-y: 100px;}
-        10%{background-position-y: -100px;}
+        0%{background-position-y: -100px;}
         100%{background-position-y: -400px;}
     }
     
@@ -85,20 +72,17 @@
 .bookNow{
     display: flex;
     justify-content: center;
-    border:none;
+
+    padding:5rem;
+    background: var(--colour-background-light);
 }
-.intake{
-    display: flex;
-    justify-content: center;
-    border:none;
-}
+
 .button{
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: clamp(16px, 5vw, 60px);
     text-decoration: none;
-    margin:2rem;
     width:100%;
     max-width: 600px;
     height: 40%;
@@ -106,56 +90,89 @@
     max-height: 150px;
     border:none;
     border-radius: 30px;
-    background:black;
-    color:hsl(200, 100%, 60%);
-
+    background:var(--colour-background-light);
+    color:var(--colour-background-dark);
+    
     font-family: Ultra, serif;
-    box-shadow: 8px 8px 20px #06f154;
-
-
+    box-shadow: 0px 0px 25px hsl(0, 0%, 20%);
+    
+    
 }
 .bio{
-    color:hsl(200, 100%, 60%);
-    line-height: 1.6;
-    padding:2rem 3rem;
-    font-size: 16px;
-}
-
-.footer{
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
-    position: fixed;
-    bottom:0;
-    padding-bottom:0.5rem;
+    flex-direction: row;
+    color:black;
+    line-height: 1.6;
+    font-size: clamp(12px, 1.5vw, 24px);
+    padding-bottom: 100px;
+
+    .description{
+        flex-basis: 100%;
+        padding:0.9rem;
+        max-width: 600px;
+    }
+    .image{
+        position: relative;
+        padding:1rem;
+        flex-basis: 100%;
+        max-width: 600px;
+        height:auto;
+
+        img{
+            width:100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}    
+.footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: fixed;
+        bottom:0;
+    padding-bottom:0.5em;
     font-size: 0.8rem;
     width: 100vw;
-    height:15vh;
-    background: black ;
-    box-shadow: 0px -5px 30px 20px #06f154;
-    font-size: clamp(16px, 2vw, 48px);
+    height:100px;
+    background: black;
     
-
+    
     
     .contact{
         display: inline;
         justify-content: center;
-        color:hsl(200, 100%, 60%);
+        color:var(--colour-blue);
         
         text-decoration: none;
-
+        
         svg{
-            width:10vw;
-            height:10vh;
+            width:60px;
+            height:60px;
         }
         
     }
     .address{
         display: flex;
         justify-content: center;
-        color:hsl(200, 100%, 60%);
+        color:var(--colour-blue);
         font-weight: 800;
         text-decoration: none;
-}
+    }
 }
 
+@media only screen and (max-width: 600px){
+    
+    .title{
+        padding:0;
+        padding-top:2em;
+        padding-bottom: 1.5em;
+        margin:0;
+    }
+    .bio{
+        flex-direction: column;
+    }
+}
