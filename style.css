@@ -16,7 +16,7 @@
 .title {
   text-align: center;
   background: var(--colour-background-dark);
-  padding: 2em;
+  padding: 4em;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -111,7 +111,7 @@
           box-shadow: 0px 0px 25px #333333;
 }
 
-.bio {
+.section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -126,19 +126,19 @@
       -ms-flex-direction: row;
           flex-direction: row;
   color: black;
-  line-height: 1.6;
+  line-height: 1.4;
   font-size: clamp(12px, 1.5vw, 24px);
   padding-bottom: 100px;
 }
 
-.bio .description {
+.description {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   padding: 0.9rem;
   max-width: 600px;
 }
 
-.bio .image {
+.image {
   position: relative;
   padding: 1rem;
   -ms-flex-preferred-size: 100%;
@@ -147,7 +147,7 @@
   height: auto;
 }
 
-.bio .image img {
+.image img {
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -198,7 +198,7 @@
   text-decoration: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .title {
     padding: 0;
     padding-top: 2em;
@@ -210,6 +210,12 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .service {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 }
 /*# sourceMappingURL=style.css.map */

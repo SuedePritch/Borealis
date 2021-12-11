@@ -16,7 +16,7 @@
 .title{
     text-align: center;
     background:var(--colour-background-dark);
-    padding: 2em;
+    padding: 4em;
     height: fit-content;
     
     h1{
@@ -98,15 +98,16 @@
     
     
 }
-.bio{
+.section{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     color:black;
-    line-height: 1.6;
+    line-height: 1.4;
     font-size: clamp(12px, 1.5vw, 24px);
     padding-bottom: 100px;
+}    
 
     .description{
         flex-basis: 100%;
@@ -127,7 +128,6 @@
             background-position: center;
         }
     }
-}    
 .footer{
         display: flex;
         align-items: center;
@@ -164,7 +164,7 @@
     }
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 800px){
     
     .title{
         padding:0;
@@ -174,5 +174,8 @@
     }
     .bio{
         flex-direction: column;
+    }
+    .service{
+        flex-direction: column-reverse;
     }
 }
