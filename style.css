@@ -1,8 +1,8 @@
 :root {
   --colour-green: hsl(140, 95%, 48%);
   --colour-blue:hsl(200, 80%, 60%);
-  --colour-background-light:hsl(0, 0%, 100%);
-  --colour-background-dark:hsl(0, 0%, 0%);
+  --colour-text:hsl(0, 0%, 100%);
+  --colour-background:hsl(0, 0%,0%);
 }
 
 * {
@@ -15,7 +15,7 @@
 
 .title {
   text-align: center;
-  background: var(--colour-background-dark);
+  background: var(--colour-background);
   padding: 4em;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -24,18 +24,17 @@
 
 .title h1 {
   font-size: clamp(16px, 12vw, 180px);
-  font-family: Ultra, serif;
+  font-family: 'Sarpanch', sans-serif;
   font-weight: 900;
-  line-height: 0.7;
-  letter-spacing: -5px;
+  line-height: 1.2;
+  letter-spacing: 3vw;
   overflow: hidden;
 }
 
 .title h2 {
   font-size: clamp(16px, 5vw, 100px);
-  font-family: Erica One;
-  font-weight: 100;
-  text-transform: uppercase;
+  font-family: Lora, serif;
+  font-weight: 800;
 }
 
 .title h1, .title h2 {
@@ -82,7 +81,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding: 5rem;
-  background: var(--colour-background-light);
+  background: var(--colour-background);
 }
 
 .button {
@@ -103,12 +102,12 @@
   min-height: 80px;
   max-height: 150px;
   border: none;
-  border-radius: 30px;
-  background: var(--colour-background-light);
-  color: var(--colour-background-dark);
-  font-family: Ultra, serif;
-  -webkit-box-shadow: 0px 0px 25px #333333;
-          box-shadow: 0px 0px 25px #333333;
+  border-radius: 10px;
+  background: var(--colour-text);
+  color: var(--colour-background);
+  font-family: Sarpanch, sans-serif;
+  -webkit-box-shadow: 0px 0px 25px black;
+          box-shadow: 0px 0px 25px black;
 }
 
 .section {
@@ -125,29 +124,38 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  color: black;
-  line-height: 1.4;
+  background: var(--colour-background);
+  color: var(--colour-text);
+  line-height: 1.8;
   font-size: clamp(12px, 1.5vw, 24px);
-  padding-bottom: 100px;
+  font-family: Poppins , sans-serif;
+  padding: 1.2rem 1.2rem 100px 1.2rem;
 }
 
-.description {
+.section .description {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  padding: 0.9rem;
   max-width: 600px;
+  padding-left: 2rem;
 }
 
-.image {
+.section h3 {
+  font-size: clamp(28px, 8vw, 36px);
+}
+
+.section li {
+  font-size: clamp(14px, 5vw, 18px);
+}
+
+.section .image {
   position: relative;
-  padding: 1rem;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  max-width: 600px;
-  height: auto;
+  max-width: 450px;
+  padding: 4rem;
 }
 
-.image img {
+.section .image img {
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
