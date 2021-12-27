@@ -11,6 +11,7 @@
     padding:0;
     box-sizing: border-box;
     overflow-x: hidden;
+    background: var(--colour-background);
     
 }
 
@@ -42,7 +43,7 @@
         
         
         animation-name: aurora;
-        animation-duration:  8s;
+        animation-duration:  18s;
         animation-timing-function: ease-out;
         animation-fill-mode: forwards;
         
@@ -50,7 +51,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         -webkit-animation-name: aurora;
-        -webkit-animation-duration: 8s;
+        -webkit-animation-duration: 18s;
         -webkit-animation-timing-function:  ease-out;
         -webkit-animation-fill-mode: forwards;
         
